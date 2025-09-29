@@ -29,3 +29,20 @@ function calculateTaxes(grossPay) {
   return grossPay * 0.15;
 }
 console.log("Tax Deduction:", calculateTaxes(1000));
+
+//Step6
+function processPayroll(employee) {
+  const basePay = calculateBasePay(employee.hourlyRate, employee.hoursWorked);
+  const overtimePay = calculateOvertimePay(employee.hourlyRate, employee.hoursWorked);
+  const grossPay = basePay + overtimePay;
+  const taxAmount = calculateTaxes(grossPay);
+  const netPay = grossPay - taxAmount;
+
+  return {
+    name: employee.name,
+    basePay: basePay.toFixed(2),
+    overtimePay: overtimePay.toFixed(2),
+    grossPay: grossPay.toFixed(2),
+    netPay: netPay.toFixed(2)
+  };
+}
