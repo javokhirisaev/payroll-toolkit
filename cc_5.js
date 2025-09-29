@@ -47,3 +47,9 @@ function processPayroll(employee) {
   };
 }
 console.log("Payroll:", processPayroll(employees[1])); 
+
+//Step7
+console.log("\nFull Payroll Report");
+employees.forEach(emp => {
+  console.log(processPayroll(emp));
+});
