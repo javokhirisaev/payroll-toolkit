@@ -46,3 +46,4 @@ function processPayroll(employee) {
     netPay: netPay.toFixed(2)
   };
 }
+console.log("Payroll:", processPayroll(employees[1])); 
